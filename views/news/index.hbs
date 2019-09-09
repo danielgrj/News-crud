@@ -1,0 +1,12 @@
+<h2>Fake News</h2>
+<a href="/news/add">Create fake new</a>
+{{#each news as |new|}}
+  <div class="new">
+    <h3>{{title}}</h3>
+    <small>{{author.name}}</small>
+    <p><{{new.body}}</p>
+    {{#if ../isAdmin}}
+      <a href="news/{{_id}}/delete">Delete</a>
+    {{/if}}
+  </div>
+  {{/each}}
